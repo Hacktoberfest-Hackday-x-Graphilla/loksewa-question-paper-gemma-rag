@@ -1,0 +1,129 @@
+{
+  "_note": "EXAMPLE ONLY - made-up records to illustrate the catalog format. Nothing here is a real exam question or a real paper. Real contributions replace these (see the Data rules in README.md).",
+  "categories": [
+    {
+      "id": "cat-gk",
+      "name_en": "General Knowledge",
+      "name_np": "सामान्य ज्ञान",
+      "sub_categories": [
+        { "id": "sc-nepal", "name_en": "Nepal Geography", "name_np": "नेपाल भूगोल" },
+        { "id": "sc-history", "name_en": "Nepal History", "name_np": "नेपालको इतिहास" }
+      ]
+    },
+    {
+      "id": "cat-cs",
+      "name_en": "Computer Science",
+      "name_np": "कम्प्युटर विज्ञान",
+      "sub_categories": [
+        { "id": "sc-network", "name_en": "Computer Networks", "name_np": "कम्प्युटर नेटवर्क" }
+      ]
+    }
+  ],
+  "subjects": [
+    {
+      "id": "sub-gk",
+      "name_en": "General Knowledge",
+      "name_np": "सामान्य ज्ञान",
+      "chapters": [
+        {
+          "name_en": "Nepal",
+          "topics": [
+            { "name_en": "Geography of Nepal" },
+            { "name_en": "National Parks" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sub-nepali",
+      "name_en": "Nepali Language",
+      "name_np": "नेपाली भाषा",
+      "chapters": [
+        {
+          "name_en": "Grammar",
+          "topics": [ { "name_en": "Sandhi (सन्धि)" } ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q-example-0001",
+      "category_id": "cat-gk",
+      "sub_category_id": "sc-nepal",
+      "question_en": "Which is the highest mountain in the world? (EXAMPLE)",
+      "question_np": "संसारकै सबैभन्दा अग्लो हिमाल कुन हो? (उदाहरण)",
+      "options": [
+        { "en": "Kanchenjunga", "np": "कञ्चनजङ्घा" },
+        { "en": "Everest", "np": "सगरमाथा" },
+        { "en": "Lhotse", "np": "ल्होत्से" },
+        { "en": "Makalu", "np": "मकालु" }
+      ],
+      "correct_option": 2,
+      "explanation_en": "EXAMPLE - Everest (Sagarmatha) stands 8,848 m. (verify before real use)",
+      "explanation_np": "उदाहरण - सगरमाथा ८,८४८ मिटर अग्लो छ। (प्रयोग गर्नु अघि पुष्टि गर्नुहोस्)",
+      "difficulty": "easy",
+      "language": "both",
+      "status": "draft"
+    },
+    {
+      "id": "q-example-0002",
+      "category_id": "cat-cs",
+      "sub_category_id": "sc-network",
+      "question_en": "Which protocol maps a domain name to an IP address? (EXAMPLE)",
+      "question_np": "कुन प्रोटोकलले डोमेन नामलाई IP ठेगानामा रूपान्तरण गर्छ? (उदाहरण)",
+      "options": [
+        { "en": "HTTP", "np": "HTTP" },
+        { "en": "DNS", "np": "DNS" },
+        { "en": "FTP", "np": "FTP" },
+        { "en": "SMTP", "np": "SMTP" }
+      ],
+      "correct_option": 2,
+      "explanation_en": "EXAMPLE - DNS resolves names to addresses. (verify before real use)",
+      "explanation_np": "उदाहरण - DNS ले नामलाई ठेगानामा बदल्छ। (प्रयोग गर्नु अघि पुष्टि गर्नुहोस्)",
+      "difficulty": "medium",
+      "language": "both",
+      "status": "draft"
+    }
+  ],
+  "question_sets": [
+    {
+      "id": "set-example-0001",
+      "title_en": "Nayab Subba 2081 - Objective (EXAMPLE)",
+      "title_np": "नायब सुब्बा २०८१ - बहुविकल्प (उदाहरण)",
+      "service_group": "Civil Service",
+      "sub_service": "Nayab Subba",
+      "field": null,
+      "year": 2081,
+      "exam_type": "objective",
+      "duration_minutes": 60,
+      "total_questions": 100,
+      "language": "both",
+      "question_ids": [],
+      "status": "draft"
+    },
+    {
+      "id": "set-example-0002",
+      "title_en": "Nayab Subba 2081 - Written (EXAMPLE)",
+      "title_np": "नायब सुब्बा २०८१ - लिखित (उदाहरण)",
+      "service_group": "Civil Service",
+      "sub_service": "Nayab Subba",
+      "field": null,
+      "year": 2081,
+      "exam_type": "written",
+      "duration_minutes": 120,
+      "total_questions": 5,
+      "language": "both",
+      "written_questions": [
+        {
+          "question_en": "Describe the roles of a Nayab Subba. (EXAMPLE)",
+          "question_np": "नायब सुब्बाको भूमिकाबारे लेख्नुहोस्। (उदाहरण)",
+          "answer_en": "EXAMPLE answer.",
+          "answer_np": "उदाहरण उत्तर।",
+          "marks": 10
+        }
+      ],
+      "status": "draft"
+    }
+  ]
+}
