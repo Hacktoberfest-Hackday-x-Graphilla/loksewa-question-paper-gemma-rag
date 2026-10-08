@@ -16,10 +16,18 @@ The exact JSON format: [`examples/example-catalog.json`](examples/example-catalo
 ## See it working
 
 ```bash
-python src/collector/collect.py --folder examples --label example
+python src/collector/collect.py
 ```
 
-_Prints how many categories, subjects, topics, and questions exist._ Python 3 only, nothing to install.
+_Prints how many categories, sub-categories, subjects, topics, and questions exist._ Python 3 only, nothing to install.
+
+There is already a first real category — **General Knowledge** — in [`data/structured/categories.json`](data/structured/categories.json). Try adding another one.
+
+To also see the clearly-marked example file:
+
+```bash
+python src/collector/collect.py --folder examples --label example
+```
 
 ## Contribute — 3 steps, no coding
 
