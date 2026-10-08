@@ -21,7 +21,7 @@ python src/collector/collect.py
 
 _Prints how many categories, sub-categories, subjects, topics, and questions exist._ Python 3 only, nothing to install.
 
-There is already a first real category — **General Knowledge** — in [`data/structured/categories.json`](data/structured/categories.json). Try adding another one.
+There are already two real categories — **General Knowledge** and **Computer Science** — in [`data/structured/categories.json`](data/structured/categories.json). Try adding another one.
 
 To also see the clearly-marked example file:
 
@@ -37,19 +37,22 @@ Setup (once):
 
 1. `pip install -r requirements.txt`
 2. Copy `.env.example` to `.env` and put your Google AI Studio API key in `GEMINI_API_KEY`. `.env` is gitignored, so the key never leaves your machine.
-3. Drop a paper in the scan folder (default `data/inbox/`) and run:
+3. Drop English question papers in the scan folder (default `data/inbox/`) and run:
 
 ```bash
 python -m src.scan.scan
 ```
 
-Re-running is safe: files already scanned are skipped.
+`data/inbox/` already ships with one small sample file (`sample-english-questions.txt`) so the very first run works immediately — it is read as plain text, exactly like any `.txt` / `.md` paper. Delete it whenever you start adding your own papers.
 
-What happens to a paper:
+Every run only scans new files (already-scanned ones are skipped), so re-running after adding papers is safe.
 
-- Plain text (`.txt`, `.md`) or a PDF with a text layer → the text goes to the model.
-- An image-only PDF (a phone scan) → the page images go to the model and are read by vision. No local OCR / Tesseract needed.
-- The model only proposes short category / sub-category labels; the scanner matches them against the catalog in `data/structured/` and stores the canonical names. Unknown labels become `uncategorized` — so even a large category file never slows a scan down.
+Papers are read two ways, depending on the file:
+
+- Plain text (`.txt`, `.md`) and PDFs that have a text layer → the text is sent to the model.
+- Image-only PDFs (a phone scan / photo of a paper — no text layer) → the page images are sent to the model and read by vision. No local OCR / Tesseract needed.
+
+After extraction, the model's short category / sub-category labels are matched against the catalog in `data/structured/` and the canonical names are stored (unknown labels become `uncategorized`). Labels are matched locally, so a large catalog never slows a scan down.
 
 ## Contribute — 3 steps, no coding
 
