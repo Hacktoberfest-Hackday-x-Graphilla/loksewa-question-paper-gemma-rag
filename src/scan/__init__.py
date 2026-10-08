@@ -1,0 +1,1 @@
+"""Scanner: English question papers -> Gemma (Google AI Studio) -> SQLite."""

@@ -16,6 +16,28 @@
         { "id": "sc-world-geography", "name_en": "World Geography", "name_np": "विश्वको भूगोल" },
         { "id": "sc-world-affairs-un", "name_en": "World Affairs and the United Nations", "name_np": "विश्व मामिला तथा संयुक्त राष्ट्र संघ" }
       ]
+    },
+    {
+      "id": "cat-computer-science",
+      "name_en": "Computer Science",
+      "name_np": "कम्प्युटर विज्ञान",
+      "sub_categories": [
+        { "id": "sc-artificial-intelligence", "name_en": "Artificial Intelligence", "name_np": "Artificial Intelligence" },
+        { "id": "sc-system-analysis-design", "name_en": "System Analysis & Design", "name_np": "System Analysis & Design" },
+        { "id": "sc-electronic-communication", "name_en": "Principle of Electronic Communication", "name_np": "इलेक्ट्रोनिक सञ्चारको सिद्धान्त" },
+        { "id": "sc-dbms", "name_en": "Database Management System", "name_np": "Database Management System" },
+        { "id": "sc-oop-programming", "name_en": "Structured & Object Oriented Programming", "name_np": "Structured & Object Oriented Programming" },
+        { "id": "sc-data-structures", "name_en": "Data Structures", "name_np": "Data Structures" },
+        { "id": "sc-computer-graphics", "name_en": "Computer Graphics", "name_np": "Computer Graphics" },
+        { "id": "sc-electrical-electronics", "name_en": "Electrical & Electronics", "name_np": "Electrical & Electronics" },
+        { "id": "sc-computer-network", "name_en": "Computer Network", "name_np": "Computer Network" },
+        { "id": "sc-digital-design", "name_en": "Digital Design", "name_np": "Digital Design" },
+        { "id": "sc-emerging-technology", "name_en": "Emerging Technology", "name_np": "Emerging Technology" },
+        { "id": "sc-theory-computation", "name_en": "Theory Of Computation", "name_np": "Theory Of Computation" },
+        { "id": "sc-computer-architecture", "name_en": "Computer Architecture", "name_np": "Computer Architecture" },
+        { "id": "sc-compiler-design", "name_en": "Compiler Design", "name_np": "Compiler Design" },
+        { "id": "sc-operating-system", "name_en": "Operating System", "name_np": "Operating System" }
+      ]
     }
   ]
 }

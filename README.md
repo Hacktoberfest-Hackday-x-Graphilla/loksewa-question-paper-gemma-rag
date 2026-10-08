@@ -2,7 +2,7 @@
 
 Collect real **Loksewa (Public Service Commission) exam content** — categories, subjects, topics, and past-paper questions — as an open dataset. Later, this feeds a **Gemma-powered AI assistant**.
 
-**Status: just started.** The starter collector works; the dataset is what contributors build.
+**Status: just started.** The starter collector and the English-paper scanner work; the dataset is what contributors build.
 
 ## What we collect
 
@@ -29,6 +29,28 @@ To also see the clearly-marked example file:
 python src/collector/collect.py --folder examples --label example
 ```
 
+## Scan a paper into the database
+
+The scanner reads English question-paper files, asks a Google AI Studio model (Gemma) to extract the MCQs, and stores them in `data/db/questions.db`.
+
+Setup (once):
+
+1. `pip install -r requirements.txt`
+2. Copy `.env.example` to `.env` and put your Google AI Studio API key in `GEMINI_API_KEY`. `.env` is gitignored, so the key never leaves your machine.
+3. Drop a paper in the scan folder (default `data/inbox/`) and run:
+
+```bash
+python -m src.scan.scan
+```
+
+Re-running is safe: files already scanned are skipped.
+
+What happens to a paper:
+
+- Plain text (`.txt`, `.md`) or a PDF with a text layer → the text goes to the model.
+- An image-only PDF (a phone scan) → the page images go to the model and are read by vision. No local OCR / Tesseract needed.
+- The model only proposes short category / sub-category labels; the scanner matches them against the catalog in `data/structured/` and stores the canonical names. Unknown labels become `uncategorized` — so even a large category file never slows a scan down.
+
 ## Contribute — 3 steps, no coding
 
 1. Open the **Issues** tab.
@@ -51,9 +73,13 @@ Stuck? Post in the **Discussions** tab — no question is dumb.
 
 ```text
 data/structured/   the catalog JSON files (contribute here)
+data/inbox/        drop question-paper files here for the scanner (gitignored)
+data/db/           SQLite database written by the scanner (gitignored)
 examples/          example catalog (clearly marked EXAMPLE)
 src/collector/     the starter collector script
-tests/             tests for the collector
+src/scan/          the question-paper scanner (needs a Gemini API key)
+tests/             tests for the collector and the scanner
+.env.example       template for your local, gitignored .env
 ```
 
 ## License

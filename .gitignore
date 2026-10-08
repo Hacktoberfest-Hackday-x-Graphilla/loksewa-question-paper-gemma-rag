@@ -29,3 +29,11 @@ tmp/
 .tmp/
 *.tmp
 scratch/
+
+# --- Generated data (scanner output, never commit) ---
+*.db
+data/db/
+
+# --- Scanned papers (your own files, never commit) ---
+pdf/
+data/inbox/*.pdf

@@ -1,0 +1,7 @@
+# Scan English question papers -> Google AI Studio (Gemma) -> SQLite.
+google-genai
+python-dotenv
+pymupdf
+
+# No local OCR binaries needed: scanned (image-only) PDFs are sent to the
+# model and read directly by vision.

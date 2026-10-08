@@ -1,0 +1,24 @@
+English question paper - SAMPLE ONLY.
+
+This is a self-authored sample for testing the scanner, not a real past
+paper. Drop real papers (PDF, .txt or .md) into this folder and re-run
+"python -m src.scan.scan".
+
+1. Which is the highest mountain in the world?
+   a) Kanchenjunga   b) Everest   c) Lhotse   d) Makalu
+
+2. Which protocol maps a domain name to an IP address?
+   a) HTTP   b) DNS   c) FTP   d) SMTP
+
+3. Which river is the longest in Nepal?
+   a) Koshi   b) Gandaki   c) Karnali   d) Trishuli
+
+4. SQL is mainly used to manage what?
+   a) Networks   b) Databases   c) Graphics   d) Sound
+
+5. How many provinces does Nepal have?
+   a) 5   b) 6   c) 7   d) 8
+
+Section B - written questions (the scanner should skip these):
+6. Describe the structure of the Public Service Commission.
+7. Explain the role of local government in Nepal.
